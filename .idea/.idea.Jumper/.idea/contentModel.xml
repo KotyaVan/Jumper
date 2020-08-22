@@ -9,14 +9,15 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraScript.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
-          <e p="GreenPlatform.cs" t="Include" />
-          <e p="OrangePlatform.cs" t="Include" />
+          <e p="HidingPlatform.cs" t="Include" />
+          <e p="MovementPlatform.cs" t="Include" />
           <e p="PlatformBase.cs" t="Include" />
           <e p="PlatformsManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
-          <e p="RedPlatform.cs" t="Include" />
-          <e p="YellowPlatform.cs" t="Include" />
+          <e p="SpeedUpPlatform.cs" t="Include" />
+          <e p="UsualPlatform.cs" t="Include" />
         </e>
       </e>
       <e p="Jumper.sln" t="IncludeFlat" />

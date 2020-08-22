@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject gameCanvas;
     [SerializeField] public GameObject endCanvas;
 
-    private int _currentSessionFullScore;
+    private int _currentSessionScore;
     private GameState _gameState;
 
     private void Start()
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         ChangeGameState(GameState.Idle);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         DisplayScore();
         FallChecker();
@@ -46,7 +46,10 @@ public class GameManager : MonoBehaviour
     private void LoseProcess()
     {
         ChangeGameState(GameState.Lose);
+        TrySetScore((int) player.MaxHeight);
         
+        _currentSessionScore = (int) player.MaxHeight;
+
         player.Restart();
         platformsManager.Restart();
         cameraScript.Restart();
@@ -54,14 +57,32 @@ public class GameManager : MonoBehaviour
 
     private void DisplayScore()
     {
-        var text = gameCanvas.GetComponentInChildren<Text>();
-        text.text = Math.Floor(player.MaxHeight).ToString();
+        Text text;
+
+
+        switch (_gameState)
+        {
+            case GameState.Idle:
+                text = startCanvas.GetComponentInChildren<Text>();
+                text.text = GetBestScore().ToString();
+                break;
+            case GameState.Play:
+                text = gameCanvas.GetComponentInChildren<Text>();
+                text.text = Math.Floor(player.MaxHeight).ToString();
+                break;
+            case GameState.Lose:
+                text = endCanvas.GetComponentInChildren<Text>();
+                text.text = _currentSessionScore.ToString();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 
     public void OnStartClick()
     {
         ChangeGameState(GameState.Play);
-        
+
         player.Activate();
         platformsManager.Activate();
     }
@@ -69,9 +90,11 @@ public class GameManager : MonoBehaviour
     public void OnRestartClick()
     {
         ChangeGameState(GameState.Play);
-        
+
         player.Activate();
         platformsManager.Activate();
+
+        _currentSessionScore = 0;
     }
 
     private void ChangeGameState(GameState state)
@@ -95,6 +118,20 @@ public class GameManager : MonoBehaviour
                 gameCanvas.SetActive(false);
                 endCanvas.SetActive(true);
                 break;
+        }
+    }
+
+    private int GetBestScore()
+    {
+        var score = PlayerPrefs.HasKey("score") ? PlayerPrefs.GetInt("score") : 0;
+        return score;
+    }
+
+    private void TrySetScore(int score)
+    {
+        if (GetBestScore() < score)
+        {
+            PlayerPrefs.SetInt("score", score);
         }
     }
 }

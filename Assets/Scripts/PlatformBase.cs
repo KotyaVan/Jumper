@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class PlatformBase : MonoBehaviour
 {
+    protected virtual int JumpForce => throw new NotImplementedException();
+    protected virtual int MinHeight => throw new NotImplementedException();
+    protected virtual int Probability => throw new NotImplementedException();
+
     private bool _disactive;
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -23,9 +27,7 @@ public class PlatformBase : MonoBehaviour
             }
         }
     }
-
-    protected virtual int JumpForce => throw new NotImplementedException();
-
+    
     protected virtual void AfterCollisionCallBack()
     {
     }
@@ -38,5 +40,10 @@ public class PlatformBase : MonoBehaviour
     
     private void OnDestroy()
     {
+    }
+
+    public void InstantiateEnemy(Enemy enemy)
+    {
+        Instantiate(enemy, transform);
     }
 }

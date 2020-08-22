@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (_active)
         {
