@@ -5,8 +5,8 @@ using Random = UnityEngine.Random;
 public class MovementPlatform : PlatformBase
 {
     protected override int JumpForce => 8;
-    protected override int MinHeight => 100;
-    protected override int Probability => 20;
+    public override int MinHeight => 150;
+    public override int Probability => 30;
 
     private Vector3 _startPosition;
     private float _movementDistance = 1.6f;

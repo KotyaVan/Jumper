@@ -1,6 +1,6 @@
 ﻿public class SpeedUpPlatform : PlatformBase
 {
     protected override int JumpForce => 18;
-    protected override int MinHeight => 5;
-    protected override int Probability => 5;
+    public override int MinHeight => 60;
+    public override int Probability => 5;
 }

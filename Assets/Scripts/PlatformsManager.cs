@@ -74,8 +74,45 @@ public class PlatformsManager : MonoBehaviour
 
     private PlatformBase GetRandomPlatformType()
     {
-        var random = Random.Range(0, 4);
-        return platfroms[random];
+        List<PlatformBase> suitablePlatforms = GetSuitablePlatforms();
+        int totalProbability = _countedProbability;
+
+        var random = Random.Range(0, totalProbability);
+        return GetPlatformWithThisProbability(suitablePlatforms, random);
+    }
+
+    private int _countedProbability;
+
+    private List<PlatformBase> GetSuitablePlatforms()
+    {
+        List<PlatformBase> list = new List<PlatformBase>();
+        _countedProbability = 0;
+
+        for (int i = 0; i < platfroms.Count; i++)
+        {
+            if (player.MaxHeight >= platfroms[i].MinHeight)
+            {
+                list.Add(platfroms[i]);
+                _countedProbability += platfroms[i].Probability;
+            }
+        }
+
+        return list;
+    }
+
+    private PlatformBase GetPlatformWithThisProbability(List<PlatformBase> platforms, int random)
+    {
+        int probabilityCounter = 0;
+
+        foreach (var platform in platforms)
+        {
+            probabilityCounter += platform.Probability;
+            if (probabilityCounter >= random)
+                return platform;
+        }
+
+        //fix for any unexpected behavior
+        return platforms.Last();
     }
 
     public void Restart()

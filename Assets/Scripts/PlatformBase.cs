@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlatformBase : MonoBehaviour
 {
     protected virtual int JumpForce => throw new NotImplementedException();
-    protected virtual int MinHeight => throw new NotImplementedException();
-    protected virtual int Probability => throw new NotImplementedException();
+    public virtual int MinHeight => throw new NotImplementedException();
+    public virtual int Probability => throw new NotImplementedException();
 
     private bool _disactive;
     private void OnCollisionEnter2D(Collision2D collision)
