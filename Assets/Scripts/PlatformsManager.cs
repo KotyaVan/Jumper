@@ -17,6 +17,7 @@ public class PlatformsManager : MonoBehaviour
     [SerializeField] public float maxY = 3f;
     [SerializeField] public Player player;
     [SerializeField] public Enemy enemy;
+    [SerializeField] public EnemiesManager enemiesManager;
 
     private List<PlatformBase> _activePlatforms = new List<PlatformBase>();
     private float _levelWidth => Camera.main.orthographicSize * Camera.main.aspect;
@@ -56,7 +57,7 @@ public class PlatformsManager : MonoBehaviour
                               Random.Range(minY, maxY);
             var platform = Instantiate(platformBase, spawnPosition, Quaternion.identity);
             _activePlatforms.Add(platform);
-            // platform.InstantiateEnemy(enemy);
+            platform.InstantiateEnemy(enemy, enemiesManager);
         }
     }
 

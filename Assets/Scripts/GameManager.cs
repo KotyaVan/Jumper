@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Player player;
     [SerializeField] public CameraScript cameraScript;
     [SerializeField] public PlatformsManager platformsManager;
+    [SerializeField] public EnemiesManager enemiesManager;
 
     [SerializeField] public GameObject startCanvas;
     [SerializeField] public GameObject gameCanvas;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         DisplayScore();
         FallChecker();
+        KilledChecker();
     }
 
     private void FallChecker()
@@ -43,6 +45,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void KilledChecker()
+    {
+        if (enemiesManager.KilledByEnemy)
+        {
+            LoseProcess();
+        }
+    }
+    
     private void LoseProcess()
     {
         ChangeGameState(GameState.Lose);
@@ -53,6 +63,7 @@ public class GameManager : MonoBehaviour
         player.Restart();
         platformsManager.Restart();
         cameraScript.Restart();
+        enemiesManager.Restart();
     }
 
     private void DisplayScore()

@@ -42,8 +42,9 @@ public class PlatformBase : MonoBehaviour
     {
     }
 
-    public void InstantiateEnemy(Enemy enemy)
+    public void InstantiateEnemy(Enemy enemy, EnemiesManager enemiesManager)
     {
-        Instantiate(enemy, transform);
+        var currentEnemy = Instantiate(enemy, transform);
+        currentEnemy.AddEnemiesManager(enemiesManager);
     }
 }

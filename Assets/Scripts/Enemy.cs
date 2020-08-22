@@ -6,6 +6,13 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class Enemy : MonoBehaviour
 {
+    private EnemiesManager _enemiesManager;
+
+    public void AddEnemiesManager(EnemiesManager manager)
+    {
+        _enemiesManager = manager;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +27,6 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Collision");
+        _enemiesManager.PlayerKilled();
     }
 }
