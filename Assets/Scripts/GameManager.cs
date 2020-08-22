@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +14,8 @@ public class GameManager : MonoBehaviour
     }
 
     [SerializeField] public Player player;
+    [SerializeField] public CameraScript cameraScript;
+    [SerializeField] public PlatformsManager platformsManager;
 
     [SerializeField] public GameObject startCanvas;
     [SerializeField] public GameObject gameCanvas;
@@ -45,6 +46,10 @@ public class GameManager : MonoBehaviour
     private void LoseProcess()
     {
         ChangeGameState(GameState.Lose);
+        
+        player.Restart();
+        platformsManager.Restart();
+        cameraScript.Restart();
     }
 
     private void DisplayScore()
@@ -56,11 +61,17 @@ public class GameManager : MonoBehaviour
     public void OnStartClick()
     {
         ChangeGameState(GameState.Play);
+        
+        player.Activate();
+        platformsManager.Activate();
     }
 
     public void OnRestartClick()
     {
         ChangeGameState(GameState.Play);
+        
+        player.Activate();
+        platformsManager.Activate();
     }
 
     private void ChangeGameState(GameState state)

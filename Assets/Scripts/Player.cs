@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
@@ -12,15 +13,22 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rb;
     public float MaxHeight { get; private set; }
 
+    private bool _active;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        
+        gameObject.SetActive(false);
     }
 
     void FixedUpdate()
     {
-        MovementProcess();
-        FlipProcess();
+        if (_active)
+        {
+            MovementProcess();
+            FlipProcess();
+        }
     }
 
     private void MovementProcess()
@@ -42,12 +50,11 @@ public class Player : MonoBehaviour
         float keyBoardData = Input.GetAxis("Horizontal");
         float accelerometerData = Input.acceleration.x;
 
-#if UNITY_EDITOR || UNITY_WII
-        movement = keyBoardData * movementSpeed;
-#else
+        #if UNITY_EDITOR || UNITY_WII
+            movement = keyBoardData * movementSpeed;
+        #else
             movement = accelerometerData * movementSpeed * accelerometerMultiplier;
-#endif
-
+        #endif
         return movement;
     }
 
@@ -67,7 +74,14 @@ public class Player : MonoBehaviour
     public void Restart()
     {
         transform.position = Vector3.zero;
-        // _rb.velocity = Vector2.zero;
-        MaxHeight = transform.position.x;
+        MaxHeight = transform.position.y;
+        _active = false;
+        gameObject.SetActive(false);
+    }
+
+    public void Activate()
+    {
+        _active = true;
+        gameObject.SetActive(true);
     }
 }

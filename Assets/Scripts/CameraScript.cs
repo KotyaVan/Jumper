@@ -5,7 +5,7 @@ public class CameraScript : MonoBehaviour
 {
 
     [SerializeField] public Transform target;
-    void Update()
+    private void Update()
     {
         if (transform.position.y < target.position.y)
         {
@@ -14,5 +14,10 @@ public class CameraScript : MonoBehaviour
             // ReSharper disable once Unity.InefficientPropertyAccess
             transform.position = position;
         }
+    }
+
+    public void Restart()
+    {
+        transform.position = Vector3.back;
     }
 }

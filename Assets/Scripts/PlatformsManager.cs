@@ -13,31 +13,26 @@ using Vector3 = UnityEngine.Vector3;
 public class PlatformsManager : MonoBehaviour
 {
     [SerializeField] private List<PlatformBase> platfroms;
-
+    [SerializeField] public float minY = 0.8f;
+    [SerializeField] public float maxY = 3f;
     [SerializeField] public GreenPlatform greenPlatform;
     [SerializeField] public RedPlatform redPlatform;
     [SerializeField] public YellowPlatform yellowPlatform;
     [SerializeField] public OrangePlatform orangePlatform;
-
     [SerializeField] public Player player;
 
     private List<PlatformBase> _activePlatforms = new List<PlatformBase>();
     private float _levelWidth => Camera.main.orthographicSize * Camera.main.aspect;
     private float _halfPlatformHeight => (greenPlatform.transform.localScale.y / 2);
-
-
-    [SerializeField] public float minY = 0.8f;
-    [SerializeField] public float maxY = 3f;
-
-    public void Start()
-    {
-        GenerateFirstPlatform();
-    }
+    private bool _active;
 
     public void Update()
     {
-        TryGeneratePlatforms();
-        TryRemovePlatforms();
+        if (_active)
+        {
+            TryGeneratePlatforms();
+            TryRemovePlatforms();
+        }
     }
 
     private void GenerateFirstPlatform()
@@ -84,8 +79,24 @@ public class PlatformsManager : MonoBehaviour
         return random > 5 ? (PlatformBase) orangePlatform : redPlatform;
     }
 
-    public void Stop()
+    public void Restart()
     {
-        _activePlatforms = new List<PlatformBase>();
+        RemoveAllPlatforms();
+        _active = false;
+    }
+
+    private void RemoveAllPlatforms()
+    {
+        while (_activePlatforms.Count > 0)
+        {
+            Destroy(_activePlatforms[0].gameObject);
+            _activePlatforms.RemoveAt(0);
+        }
+    }
+
+    public void Activate()
+    {
+        _active = true;
+        GenerateFirstPlatform();
     }
 }

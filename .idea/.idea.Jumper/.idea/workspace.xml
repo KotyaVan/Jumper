@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ae1e201-f0a9-4d69-be20-da99981f1a6c" name="Default Changelist" comment="" />
+    <list default="true" id="6ae1e201-f0a9-4d69-be20-da99981f1a6c" name="Default Changelist" comment="Initial commit">
+      <changelist_data />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Jumper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jumper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,16 +59,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/RedPlatfrom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RedPlatform.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/YellowPlatform.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlatformBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlatformsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OrangePlatform.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlatformsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1fHgY8jLpmI4HipxseQ2KYeGVID" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -112,8 +121,16 @@
       <workItem from="1597785085281" duration="5808000" />
       <workItem from="1597944353389" duration="1285000" />
       <workItem from="1598100721409" duration="2238000" />
-      <workItem from="1598103477648" duration="3570000" />
+      <workItem from="1598103477648" duration="6900000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1598107215741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598107215741</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +138,21 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="-1506" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596921072987">
       <screen x="-1920" y="0" width="1920" height="1040" />
@@ -219,10 +251,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="450" y="144" width="636" height="536" key="find.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1596975136300" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1598103665825">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1598109372214">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598103665825" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598109372214" />
     <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597166050693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
