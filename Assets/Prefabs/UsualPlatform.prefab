@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5219723644809967838}
   - component: {fileID: 7809180386142077845}
   m_Layer: 0
-  m_Name: RedPlatform
+  m_Name: UsualPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

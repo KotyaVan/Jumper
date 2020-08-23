@@ -443,7 +443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b235210391447dd873fde66fda0dd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killedByEnemy: 0
 --- !u!4 &297038851
 Transform:
   m_ObjectHideFlags: 0
@@ -1593,7 +1592,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.007687241}
+  m_Offset: {x: -0.002932787, y: -0.54}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1604,7 +1603,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.92, y: 1.2246256}
+  m_Size: {x: 1.7968209, y: 0.22132778}
   m_EdgeRadius: 0
 --- !u!114 &1612402721
 MonoBehaviour:
@@ -1618,6 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4102d32199011b4886ad3616cfad617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: -5913692671581683197, guid: a90b89f17423d354f8f9104898b40757, type: 3}
   movementSpeed: 10
   accelerometerMultiplier: 2.2
 --- !u!1 &1625839074

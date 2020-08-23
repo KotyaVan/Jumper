@@ -57,7 +57,10 @@ public class PlatformsManager : MonoBehaviour
                               Random.Range(minY, maxY);
             var platform = Instantiate(platformBase, spawnPosition, Quaternion.identity);
             _activePlatforms.Add(platform);
-            platform.InstantiateEnemy(enemy, enemiesManager);
+            if (enemiesManager.CanCreateEnemy((int) player.MaxHeight))
+            {
+                platform.InstantiateEnemy(enemy, enemiesManager);
+            }
         }
     }
 

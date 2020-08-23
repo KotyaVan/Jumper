@@ -12,21 +12,17 @@ public class Enemy : MonoBehaviour
     {
         _enemiesManager = manager;
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
-        _enemiesManager.PlayerKilled();
+        if (other.transform.GetComponent<Player>())
+        {
+            _enemiesManager.PlayerKilled();
+        }
+        else
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
