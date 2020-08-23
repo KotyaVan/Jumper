@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ae1e201-f0a9-4d69-be20-da99981f1a6c" name="Default Changelist" comment="Iteration">
-      <changelist_data />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Jumper/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jumper/.idea/contentModel.xml" afterDir="false" />
+      <changelist_data name="" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Jumper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Jumper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UsualPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UsualPlatform.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemiesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformsManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +21,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlatformsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05F2AC9C-8847-4269-9276-5A22EF6D94CA/27/578ae906/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemiesManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05F2AC9C-8847-4269-9276-5A22EF6D94CA/61/9337f981/Screen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05F2AC9C-8847-4269-9276-5A22EF6D94CA/1a/b48c140e/Camera.cs" root0="SKIP_HIGHLIGHTING" />
@@ -46,6 +37,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/d9/2072fc00/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2DB13BA0-D523-4322-8AA9-892C408FB49A/55/4320c433/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05F2AC9C-8847-4269-9276-5A22EF6D94CA/56/75c77cde/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UsualPlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C08D55D3-6463-439D-B112-60F6502EC141/1e/54563bbe/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -84,8 +76,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlatformsManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemiesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -110,10 +102,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33388">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="33388" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
     <list>
@@ -143,6 +135,7 @@
       <workItem from="1597944353389" duration="1285000" />
       <workItem from="1598100721409" duration="2238000" />
       <workItem from="1598103477648" duration="28772000" />
+      <workItem from="1598210847567" duration="1438000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1598107215741</created>
@@ -199,7 +192,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -294,6 +289,10 @@
     </state>
     <state x="601" y="128" key="RiderGenerateDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598187811346" />
     <state x="601" y="128" key="RiderGenerateDialog/0.0.1536.824@0.0.1536.824" timestamp="1596563002759" />
+    <state x="540" y="134" key="RollbackChangesDialog" timestamp="1598212163303">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="134" key="RollbackChangesDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598212163303" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1598188001463">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -314,14 +313,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="545" y="146" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598133281007" />
-    <state x="450" y="144" width="636" height="536" key="find.popup" timestamp="1598188102895">
+    <state x="450" y="144" width="636" height="536" key="find.popup" timestamp="1598210881407">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="450" y="144" width="636" height="536" key="find.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598188102895" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1598182829320">
+    <state x="450" y="144" width="636" height="536" key="find.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598210881407" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1598212262260">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598182829320" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1598212262260" />
     <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1597166050693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

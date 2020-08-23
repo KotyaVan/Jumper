@@ -74,15 +74,16 @@ public class Player : MonoBehaviour
 
     private void ShoutProcess()
     {
-        bool shout;
-
+        bool shoot;
+        
         #if UNITY_EDITOR || UNITY_WII
-            shout = Input.GetKeyDown(KeyCode.DownArrow);
+            shoot = Input.GetKeyDown(KeyCode.DownArrow);
         #else
-            shout = Input.touchCount > 0;
+            var touch = Input.GetTouch(0);
+            shoot = touch.phase == TouchPhase.Ended;
         #endif
 
-        if (shout)
+        if (shoot)
         {
             Shoot();
         }
@@ -90,6 +91,8 @@ public class Player : MonoBehaviour
 
     private void Shoot()
     {
+        var position = new Vector3(transform.position.x, (float) (transform.position.y + 0.35), transform.position.z);
+        
         var createdBulled = Instantiate(bullet, transform.position, Quaternion.identity);
         var rb = createdBulled.GetComponent<Rigidbody2D>();
         
